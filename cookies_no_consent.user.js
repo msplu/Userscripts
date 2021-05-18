@@ -11,6 +11,7 @@ function removeModal() {
   document.body.style.overflow = 'initial';
   document.getElementById('didomi-host').remove();
   document.getElementById('didomiConsentOverlay').remove();
+  document.getElementById('cookiesEncourag').remove();
 }
 
 const removeModalTimer = setTimeout(removeModal, 1000);
