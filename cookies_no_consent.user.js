@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.4
-// @description 18/05/2021 à 16:42:00
+// @version     1.5
+// @description 18/05/2021 à 17:39:00
 // ==/UserScript==
 
 function removeModal() {
