@@ -11,4 +11,4 @@ function removeModal() {
   document.getElementById('didomi-host').remove();
 }
 
-const removeModalTimer = setTimeout(removeModal, 1500);
+const removeModalTimer = setTimeout(removeModal, 1200);
