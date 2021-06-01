@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.7
-// @description 19/05/2021 à 09:15:00
+// @version     1.8
+// @description 01/06/2021 à 15:50:00
 // ==/UserScript==
 
 function removeElement() {
@@ -23,6 +23,11 @@ function removeElement() {
   const cookiesEncourag = document.getElementById('cookiesEncourag');
   if (cookiesEncourag) {
     cookiesEncourag.remove();
+  }
+
+  const consentFramework = document.getElementById('sd-cmp');
+  if (consentFramework) {
+    consentFramework.remove();
   }
 }
 
