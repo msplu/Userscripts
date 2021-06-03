@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.13
-// @description 15/06/2021 à 14:17:00
+// @version     1.14
+// @description 15/06/2021 à 14:25:00
 // ==/UserScript==
 
 function removeElements() {
@@ -24,6 +24,11 @@ function removeElements() {
     'qc-cmp2-container',
     'tarteaucitronRoot',
     'onetrust-consent-sdk',
+    'sp-cc',
+    'footer_tc_privacy',
+    'cookie-notice',
+    'privacy_modal',
+    'axeptio_overlay',
     'klaro',
     'cookies-consent'
   ];
