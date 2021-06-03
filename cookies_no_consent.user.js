@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.9
-// @description 03/06/2021 à 10:07:00
+// @version     1.10
+// @description 03/06/2021 à 11:00:00
 // ==/UserScript==
 
 function removeElement() {
