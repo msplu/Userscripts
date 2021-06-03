@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.10
-// @description 03/06/2021 à 11:00:00
+// @version     1.11
+// @description 03/06/2021 à 14:40:00
 // ==/UserScript==
 
 function removeElement() {
@@ -22,7 +22,8 @@ function removeElement() {
     'cookiesEncourag',
     'sd-cmp',
     'qc-cmp2-container',
-    'tarteaucitronRoot'
+    'tarteaucitronRoot',
+    'onetrust-consent-sdk'
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
