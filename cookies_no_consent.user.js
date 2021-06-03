@@ -16,25 +16,16 @@ function removeElement() {
   document.body.classList.remove('didomi-popup-open');
   document.body.style.overflow = 'initial';
   
-  const didomiHost = document.getElementById('didomi-host');
-  if (didomiHost) {
-    didomiHost.remove();
-  }
+  const ids = [
+    'didomi-host',
+    'didomiConsentOverlay',
+    'cookiesEncourag',
+    'sd-cmp',
+    'qc-cmp2-container',
+    'tarteaucitronRoot'
+  ];
   
-  const didomiConsentOverlay = document.getElementById('didomiConsentOverlay');
-  if (didomiConsentOverlay) {
-    didomiConsentOverlay.remove();
-  }
-  
-  const cookiesEncourag = document.getElementById('cookiesEncourag');
-  if (cookiesEncourag) {
-    cookiesEncourag.remove();
-  }
-
-  const consentFramework = document.getElementById('sd-cmp');
-  if (consentFramework) {
-    consentFramework.remove();
-  }
+  ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
 }
 
 const removeElementTimer = setTimeout(removeElement, 1000);
