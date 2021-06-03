@@ -2,11 +2,17 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.8
-// @description 01/06/2021 à 15:50:00
+// @version     1.9
+// @description 03/06/2021 à 10:07:00
 // ==/UserScript==
 
 function removeElement() {
+  for (let i = document.documentElement.classList.length - 1; i >= 0; i--) {
+      const className = document.documentElement.classList[i];
+      if (className.startsWith('sd-cmp')) {
+          document.documentElement.classList.remove(className);
+      }
+  }
   document.body.classList.remove('didomi-popup-open');
   document.body.style.overflow = 'initial';
   
