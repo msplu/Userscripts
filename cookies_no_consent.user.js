@@ -2,11 +2,11 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.11
-// @description 03/06/2021 à 14:40:00
+// @version     1.12
+// @description 15/06/2021 à 08:24:00
 // ==/UserScript==
 
-function removeElement() {
+function removeElements() {
   for (let i = document.documentElement.classList.length - 1; i >= 0; i--) {
       const className = document.documentElement.classList[i];
       if (className.startsWith('sd-cmp')) {
@@ -23,10 +23,16 @@ function removeElement() {
     'sd-cmp',
     'qc-cmp2-container',
     'tarteaucitronRoot',
-    'onetrust-consent-sdk'
+    'onetrust-consent-sdk',
+    'klaro'
+  ];
+  
+  const classes = [
+    'wt-cli-cookie-bar-container'
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
+  classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
 }
 
-const removeElementTimer = setTimeout(removeElement, 1000);
+const removeElementsTimer = setTimeout(removeElements, 1000);
