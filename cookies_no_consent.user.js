@@ -2,11 +2,13 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.15
-// @description 13/09/2021 à 15:20:00
+// @run-at      document-start
+// @version     1.16
+// @description 13/09/2021 à 15:52:00
 // ==/UserScript==
 
 function removeElements() {
+  console.log('yo');
   for (let i = document.documentElement.classList.length - 1; i >= 0; i--) {
       const className = document.documentElement.classList[i];
       if (className.startsWith('sd-cmp')) {
@@ -47,4 +49,6 @@ function removeElements() {
   classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
 }
 
-const removeElementsTimer = setTimeout(removeElements, 1000);
+const removeElementsTimer = setInterval(removeElements, 200);
+
+setTimeout(() => { clearInterval(removeElementsTimer); }, 1000);
