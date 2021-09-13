@@ -8,7 +8,6 @@
 // ==/UserScript==
 
 function removeElements() {
-  console.log('yo');
   for (let i = document.documentElement.classList.length - 1; i >= 0; i--) {
       const className = document.documentElement.classList[i];
       if (className.startsWith('sd-cmp')) {
