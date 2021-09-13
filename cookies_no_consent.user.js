@@ -2,8 +2,8 @@
 // @name        Cookies No Consent
 // @match       *://*/*
 // @grant       none
-// @version     1.14
-// @description 15/06/2021 à 14:25:00
+// @version     1.15
+// @description 13/09/2021 à 15:20:00
 // ==/UserScript==
 
 function removeElements() {
@@ -13,8 +13,12 @@ function removeElements() {
           document.documentElement.classList.remove(className);
       }
   }
-  document.body.classList.remove('didomi-popup-open');
   document.body.style.overflow = 'initial';
+  
+  const bodyClasses = [
+    'didomi-popup-open',
+    'appconsent_noscroll'
+  ];
   
   const ids = [
     'didomi-host',
@@ -30,7 +34,8 @@ function removeElements() {
     'privacy_modal',
     'axeptio_overlay',
     'klaro',
-    'cookies-consent'
+    'cookies-consent',
+    'appconsent'
   ];
   
   const classes = [
@@ -38,6 +43,7 @@ function removeElements() {
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
+  bodyClasses.forEach(className => document.body.classList.remove(className));
   classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
 }
 
