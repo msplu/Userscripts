@@ -48,6 +48,6 @@ function removeElements() {
   classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
 }
 
-const removeElementsTimer = setInterval(removeElements, 200);
+const removeElementsInterval = setInterval(removeElements, 200);
 
-setTimeout(() => { clearInterval(removeElementsTimer); }, 1000);
+setTimeout(() => { clearInterval(removeElementsInterval); }, 1000);
