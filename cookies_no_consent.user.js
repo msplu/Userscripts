@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.16
-// @description 13/09/2021 à 15:52:00
+// @version     1.17
+// @description 14/09/2021 à 08:02:00
 // ==/UserScript==
 
 function removeElements() {
@@ -40,7 +40,8 @@ function removeElements() {
   ];
   
   const classes = [
-    'wt-cli-cookie-bar-container'
+    'wt-cli-cookie-bar-container',
+    'js-consent-banner'
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
