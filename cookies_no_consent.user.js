@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.17
-// @description 14/09/2021 à 08:02:00
+// @version     1.18
+// @description 14/10/2021 à 09:38:00
 // ==/UserScript==
 
 function removeElements() {
@@ -36,12 +36,19 @@ function removeElements() {
     'axeptio_overlay',
     'klaro',
     'cookies-consent',
-    'appconsent'
+    'appconsent',
+    'CybotCookiebotDialogBodyUnderlay',
+    'CybotCookiebotDialog',
+    'cc-banner-wrap'
   ];
   
   const classes = [
     'wt-cli-cookie-bar-container',
-    'js-consent-banner'
+    'js-consent-banner',
+    'truste_cm_outerdiv',
+    'truste_overlay',
+    'privacy-consent--backdrop',
+    'privacy-consent--modal'
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
@@ -51,4 +58,6 @@ function removeElements() {
 
 const removeElementsInterval = setInterval(removeElements, 200);
 
-setTimeout(() => { clearInterval(removeElementsInterval); }, 1000);
+setTimeout(() => { clearInterval(removeElementsInterval); }, 1500);
+
+setTimeout(removeElements, 3000);
