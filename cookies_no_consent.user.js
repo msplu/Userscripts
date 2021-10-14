@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.18
-// @description 11/10/2021 à 15:30:00
+// @version     1.19
+// @description 14/10/2021 à 09:41:00
 // ==/UserScript==
 
 function removeElements() {
@@ -46,7 +46,9 @@ function removeElements() {
     'wt-cli-cookie-bar-container',
     'js-consent-banner',
     'truste_cm_outerdiv',
-    'truste_overlay'
+    'truste_overlay',
+    'privacy-consent--backdrop',
+    'privacy-consent--modal'
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
