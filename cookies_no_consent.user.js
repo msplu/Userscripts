@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.19
-// @description 14/10/2021 à 09:41:00
+// @version     1.20
+// @description 04/05/2023 à 12:15:00
 // ==/UserScript==
 
 function removeElements() {
@@ -52,7 +52,7 @@ function removeElements() {
   ];
   
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
-  bodyClasses.forEach(className => document.body.classList.remove(className));
+  bodyClasses.forEach(className => document.body?.classList?.remove(className));
   classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
 }
 
