@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.20
-// @description 04/05/2023 à 12:15:00
+// @version     1.21
+// @description 02/02/2024 à 09:48:00
 // ==/UserScript==
 
 function removeElements() {
@@ -14,11 +14,18 @@ function removeElements() {
           document.documentElement.classList.remove(className);
       }
   }
-  document.body.style.overflow = 'initial';
+  if (document.body) {
+    document.body.style.overflow = 'initial';
+  }
+
+  const htmlClasses = [
+    'popin-gdpr-no-scroll',
+    'i-amphtml-scroll-disabled',
+  ];
   
   const bodyClasses = [
     'didomi-popup-open',
-    'appconsent_noscroll'
+    'appconsent_noscroll',
   ];
   
   const ids = [
@@ -39,7 +46,9 @@ function removeElements() {
     'appconsent',
     'CybotCookiebotDialogBodyUnderlay',
     'CybotCookiebotDialog',
-    'cc-banner-wrap'
+    'cc-banner-wrap',
+    'ez-cookie-dialog-wrapper',
+    'tc-privacy-wrapper',
   ];
   
   const classes = [
@@ -48,9 +57,13 @@ function removeElements() {
     'truste_cm_outerdiv',
     'truste_overlay',
     'privacy-consent--backdrop',
-    'privacy-consent--modal'
+    'privacy-consent--modal',
+    'gdpr-hfp-wall',
+    'i-amphtml-consent-ui-modal',
+    'i-amphtml-consent-ui-mask',
   ];
-  
+
+  htmlClasses.forEach(className => document.documentElement.classList?.remove(className));
   ids.forEach(id => document.getElementById(id) !== null && document.getElementById(id).remove());
   bodyClasses.forEach(className => document.body?.classList?.remove(className));
   classes.forEach(className => Array.from(document.getElementsByClassName(className)).forEach(el => el.remove()));
@@ -59,5 +72,5 @@ function removeElements() {
 const removeElementsInterval = setInterval(removeElements, 200);
 
 setTimeout(() => { clearInterval(removeElementsInterval); }, 2000);
-
 setTimeout(removeElements, 4000);
+setTimeout(removeElements, 10000);
