@@ -3,8 +3,8 @@
 // @match       *://*/*
 // @grant       none
 // @run-at      document-start
-// @version     1.21
-// @description 02/02/2024 à 09:48:00
+// @version     1.22
+// @description 23/02/2024 à 13:57:00
 // ==/UserScript==
 
 function removeElements() {
