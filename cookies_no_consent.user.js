@@ -49,6 +49,7 @@ function removeElements() {
     'cc-banner-wrap',
     'ez-cookie-dialog-wrapper',
     'tc-privacy-wrapper',
+    'privacy-overlay',
   ];
   
   const classes = [
